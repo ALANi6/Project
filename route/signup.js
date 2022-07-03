@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const jwt = require('jsonwebtoken');
+const bcrypt=require("bcrypt")
 const {sequelize} = require("../models/index");
  
 router.get('/', function(req, res) {
@@ -17,8 +18,6 @@ router.post('/', async(req, res )=>{
     email : req.body.email,
     password : await bcrypt.hash(req.body.password, salt)
   };
-  created_user = await User.create(usr);
-  res.status(201).json(created_user);
 });
  
 module.exports = router;
