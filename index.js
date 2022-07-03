@@ -6,7 +6,6 @@ const usersignup = require("./route/signup");
 const authorize = require("./route/authorization");
 const {sequelize} = require("./models/index");
 require("dotenv").config;
-
 const app = express();
 const port = process.env.PORT || 3000;
 
