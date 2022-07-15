@@ -8,7 +8,7 @@ function Signupcontrol(req, res) {
     if (!username || !email || !password)
       res.status(400).json({ message:"User does not registration" });
     else {
-      signup(req, username, email, password);
+       signup(req, username, email, password);
     }
   }
 
@@ -17,6 +17,11 @@ function Signupcontrol(req, res) {
         where: { email: email },
       });
       if(!user){
+        const user= await sequelize.module.User.Create({
+          username,
+          email,
+          password
+        })
     res.status(201).json({message:"created_user"});
       }
   }
