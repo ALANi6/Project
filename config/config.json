@@ -4,23 +4,20 @@
     "password": "1234",
     "database": "node_app",
     "host": "localhost",
-    "dialect": "mysql",
-    "logging": true
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "1234",
     "database": "node_app",
     "host": "localhost",
-    "dialect": "mysql",
-    "logging": true
+    "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "1234",
     "database": "node_app",
     "host": "localhost",
-    "dialect": "mysql",
-    "logging": true
+    "dialect": "mysql"
   }
 }
